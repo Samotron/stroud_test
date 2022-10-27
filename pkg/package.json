@@ -1,0 +1,12 @@
+{
+  "name": "rusty_ground_engineering",
+  "version": "0.1.0",
+  "files": [
+    "rusty_ground_engineering_bg.wasm",
+    "rusty_ground_engineering.js",
+    "rusty_ground_engineering.d.ts"
+  ],
+  "module": "rusty_ground_engineering.js",
+  "types": "rusty_ground_engineering.d.ts",
+  "sideEffects": false
+}
