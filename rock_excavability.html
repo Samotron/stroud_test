@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <title>Stroud F1 test</title>
+  </head>
+  <body>
+    <script type="module">
+      import init, { greet, stroud_f1 } from "./pkg/rusty_ground_engineering.js";
+      init()
+    </script>
+    <script type="module">
+        import init, { greet, excavability_assessment, RockExcavabilityTypes} from "./pkg/rusty_ground_engineering.js";
+        function rock_excavability() {
+            document.getElementById("f1Results").innerHTML = RockExcavabilityTypes[excavability_assessment(document.getElementById("isval").value, document.getElementById("irval").value)]
+        }
+       
+
+
+        function functions() {
+           rock_excavability()
+        }
+        document.getElementById("isval").addEventListener("change", functions)
+        document.getElementById("irval").addEventListener("change", functions)
+
+
+    </script>
+    <h1>Excavability Assessment</h1>
+    <p>This tool takes the is50 value and ir and calculates the exacability values</p>
+    <p>To use just input the values below and the calcs will be automatically carried out</p>
+    <a>Is50 Value</a>
+    <input type="number" id="isval" name="pival" value="25" min="0.1", max="30.0"><br><br>
+    <a>Discontinuity Index Spacing Value</a>
+    <input type="number" id="irval" name="nval" value="0.2" min="0.02", max="6.0"><br><br>
+    <br><a>Excavability - <a id="f1Results">empty!</a></a>
+    
+  </body>
+</html>
